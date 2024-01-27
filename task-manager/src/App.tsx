@@ -4,10 +4,13 @@ import DashboardPage from "./views/Dashboard/Dashboard";
 
 function App() {
   return (
-    <div className="App h-screen overflow-y-hidden">
-      <div className="grid grid-cols-4 h-full  w-full">
+    <div
+      className="App h-screen"
+      style={{ maxWidth: "100wv", maxHeight: "100vh", overflow: "hidden" }}
+    >
+      <div className="grid grid-cols-4 h-full">
         <Sidebar />
-        <div className="bg-bg-color  col-span-3 flex flex-col  w-full justify-start align-top overflow-y-scroll">
+        <div className="bg-light-accent  col-span-3 flex flex-col	justify-start items-start ">
           <div className="bg-white h-24 w-full border-b border-solid border-b-light-grey"></div>
           <div className="flex flex-row justify-between w-full p-6 align-middle">
             <h1 className="text-4xl text-blue bg-purple-200 ">🔥 Task</h1>
@@ -33,6 +36,7 @@ function App() {
                 alt=""
               />
               <span className="text-grey font-normal text-lg mx-4">+6</span>
+
               <button
                 className="w-8 h-8 rounded-full pb-1
                        bg-light-grey hover:bg-accent-color text-accent-color hover:text-light-grey duration-300	 transition-all font-bold hover:cursor-pointer"

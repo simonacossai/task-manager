@@ -72,24 +72,26 @@ const onDragEnd = (result: any, columns: any, setColumns: any) => {
 function DashboardPage() {
   const [columns, setColumns] = useState(taskStatus);
   return (
-    <div className="flex flex-row align-start justify-start w-full  overflow-scroll h-full">
-      <div className="flex flex-row align-start overflow-scroll justify-start w-full ">
+    <div className="flex flex-row align-start justify-start w-full  h-full">
+      <div className="flex flex-row align-start  justify-start w-full ">
         <DragDropContext
           onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
         >
           {Object.entries(columns).map(([columnId, column], index) => {
             return (
               <div
-                className="flex flex-col align-start justify-start w-full overflow-scroll"
+                className="flex flex-col align-start justify-start w-full "
                 key={columnId}
                 style={{
                   maxWidth: 320,
+                  margin: 10,
                 }}
               >
                 <div
                   className="flex flex-row align-center justify-center bg-white m-2 p-4 rounded-lg "
                   style={{
                     maxWidth: 320,
+                    margin: 10,
                   }}
                 >
                   <h2>{column.name}</h2>
@@ -98,6 +100,8 @@ function DashboardPage() {
                   className="m-2"
                   style={{
                     maxWidth: 320,
+
+                    margin: 10,
                   }}
                 >
                   <Droppable droppableId={columnId} key={columnId}>
