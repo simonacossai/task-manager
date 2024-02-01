@@ -10,8 +10,8 @@ function App() {
     >
       <div className="grid grid-cols-4 h-full">
         <Sidebar />
-        <div className="bg-light-accent  col-span-3 flex flex-col	justify-start items-start ">
-          <div className="bg-white h-24 w-full border-b border-solid border-b-light-grey"></div>
+        <div className="bg-bg-color  col-span-3 flex flex-col	justify-start items-start ">
+          <div className="bg-white h-32 w-full border-b border-solid border-b-light-grey"></div>
           <div className="flex flex-row justify-between w-full p-6 align-middle">
             <h1 className="text-4xl text-blue bg-purple-200 ">🔥 Task</h1>
             <div className="flex-space-x-1 overflow-hidden">

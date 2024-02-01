@@ -83,14 +83,14 @@ function DashboardPage() {
                 className="flex flex-col align-start justify-start w-full "
                 key={columnId}
                 style={{
-                  maxWidth: 320,
+                  maxWidth: 350,
                   margin: 10,
                 }}
               >
                 <div
                   className="flex flex-row align-center justify-center bg-white m-2 p-4 rounded-lg "
                   style={{
-                    maxWidth: 320,
+                    maxWidth: 350,
                     margin: 10,
                   }}
                 >
@@ -99,7 +99,7 @@ function DashboardPage() {
                 <div
                   className="m-2"
                   style={{
-                    maxWidth: 320,
+                    maxWidth: 350,
 
                     margin: 10,
                   }}
@@ -111,7 +111,7 @@ function DashboardPage() {
                           {...provided.droppableProps}
                           ref={provided.innerRef}
                           style={{
-                            maxWidth: 320,
+                            maxWidth: 350,
                           }}
                         >
                           {column.items.map((item, index) => {
@@ -127,15 +127,17 @@ function DashboardPage() {
                                       ref={provided.innerRef}
                                       {...provided.draggableProps}
                                       {...provided.dragHandleProps}
+                                      className="rounded-lg"
                                       style={{
                                         userSelect: "none",
                                         padding: 16,
                                         margin: "0 0 8px 0",
                                         minHeight: "50px",
                                         backgroundColor: snapshot.isDragging
-                                          ? "#263B4A"
-                                          : "#456C86",
-                                        color: "white",
+                                          ? "#FBFAFF"
+                                          : "#FFFFFF",
+                                        color: "black",
+
                                         ...provided.draggableProps.style,
                                       }}
                                     >

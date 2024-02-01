@@ -9,7 +9,7 @@ import SidebarTile from "../SidebarTile/SidebarTile";
 const Sidebar = () => {
   return (
     <div className="bg-white flex flex-col justify-start items-center border-r border-solid border-r-light-grey relative h-full">
-      <div className="border-b border-solid border-b-light-grey  w-full flex  h-24  items-center justify-start mb-8">
+      <div className=" w-full flex  h-24  items-center justify-start mb-8">
         <img className="w-24 m-6" src={appIcon} alt="Application Logo" />
       </div>
       <SidebarTile icon={dashboardIcon} label="Dashboard" />
