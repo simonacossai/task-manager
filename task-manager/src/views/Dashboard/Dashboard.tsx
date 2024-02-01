@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+import DraggableCard from "./components/DraggableCard";
 
 const tasks = [
   { id: "1", content: "First task" },
@@ -83,14 +84,14 @@ function DashboardPage() {
                 className="flex flex-col align-start justify-start w-full "
                 key={columnId}
                 style={{
-                  maxWidth: 350,
+                  maxWidth: 330,
                   margin: 10,
                 }}
               >
                 <div
                   className="flex flex-row align-center justify-center bg-white m-2 p-4 rounded-lg "
                   style={{
-                    maxWidth: 350,
+                    maxWidth: 330,
                     margin: 10,
                   }}
                 >
@@ -99,7 +100,7 @@ function DashboardPage() {
                 <div
                   className="m-2"
                   style={{
-                    maxWidth: 350,
+                    maxWidth: 330,
 
                     margin: 10,
                   }}
@@ -111,7 +112,7 @@ function DashboardPage() {
                           {...provided.droppableProps}
                           ref={provided.innerRef}
                           style={{
-                            maxWidth: 350,
+                            maxWidth: 330,
                           }}
                         >
                           {column.items.map((item, index) => {
@@ -131,7 +132,7 @@ function DashboardPage() {
                                       style={{
                                         userSelect: "none",
                                         padding: 16,
-                                        margin: "0 0 8px 0",
+                                        margin: "0 0 20px 0",
                                         minHeight: "50px",
                                         backgroundColor: snapshot.isDragging
                                           ? "#FBFAFF"
@@ -141,7 +142,7 @@ function DashboardPage() {
                                         ...provided.draggableProps.style,
                                       }}
                                     >
-                                      {item.content}
+                                      <DraggableCard />
                                     </div>
                                   );
                                 }}
